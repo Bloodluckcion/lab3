@@ -18,15 +18,24 @@
 
 #### Структура проекта:
 
+# Lab 3 - Портфолио
+
+## Структура проекта
+
+```
 lab3/
 ├── index.html
-├── styles/
-│ ├── style.scss # Главный файл стилей
-│ ├── _variables.scss # Переменные
-│ ├── _mixins.scss # Миксины
-│ ├── _dark-theme.scss # Тёмная тема
-│ └── style.css # Скомпилированный CSS
-└── README.md
+├── README.md
+├── avatar.jpg
+└── styles/
+|   ├── style.css
+|   ├── style.scss
+|   ├── style.css.map
+|   ├── _variables.scss
+|   ├── _mixins.scss
+|   └── _dark-theme.scss
+```
+
 
 ### Ответы на вопросы:
 
@@ -52,5 +61,5 @@ https://github.com/Bloodluckcion/lab3
 
 ### Скриншоты:
 
-![alt text]({4B108E2A-025B-4757-82D8-87BDC13ECFD6}.png)
-![alt text]({CC8C8182-6D0D-4D8D-B03A-04B1D1A7AFBA}.png)
+![alt text]({2AC1EDA0-50CB-467C-A68C-A270BDF9611F}.png)
+![alt text]({83C0B81B-5678-4C69-8D97-FD001F0538C7}.png)
