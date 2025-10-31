@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль разработчика | SASS</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeSwitch">🌙 Тёмная тема</button>
+    </div>
+
+    <div class="container">
+        <header class="profile-header">
+            <img src="avatar.jpg" alt="Моё фото" class="avatar">
+        </header>
+
+        <main class="main-content">
+            <section class="about-section">
+                <h2>👨‍💻 Обо мне</h2>
+                <div class="card">
+                    <p>Разрабатываю современные и адаптивные веб-приложения. Увлекаюсь изучением геймдизайна. Планирую сделать свой Оазис (Из фильма "Первому игроку приготовиться").</p>
+                </div>
+            </section>
+
+            <section class="skills-section">
+                <h2>🛠️ Навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS/SASS</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Git</div>
+                    <div class="skill-card">React</div>
+                    <div class="skill-card">Figma</div>
+                </div>
+            </section>
+
+            <section class="projects-section">
+                <h2>📂 Проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Портфолио сайт</h3>
+                        <p>Базовое HTML портфолио</p>
+                        <a href="https://github.com/Bloodluckcion/lab1" class="btn-primary">Посмотреть</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Портфолио сайт (v2)</h3>
+                        <p>Стилизованное портфолио</p>
+                        <a href="https://github.com/Bloodluckcion/lab2" class="btn-secondary">Посмотреть</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://github.com/Bloodluckcion" class="social-link">GitHub</a>
+                <a href="https://t.me/Bloodluckcion" class="social-link">Telegram</a>
+                <a href="https://vk.com/Bloodluckcion" class="social-link">VK</a>
+            </div>
+            <p class="copyright">&copy; 2025 Мой профиль</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeSwitch = document.getElementById('themeSwitch');
+        themeSwitch.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            this.textContent = document.body.classList.contains('dark-theme') 
+                ? '☀️ Светлая тема' 
+                : '🌙 Тёмная тема';
+        });
+    </script>
+</body>
+</html>

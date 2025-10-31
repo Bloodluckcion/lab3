@@ -1,0 +1,151 @@
+// Импортируем все компоненты
+@import 'variables';
+@import 'mixins';
+@import 'dark-theme';
+
+// Базовые стили
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: $base-font-size;
+    line-height: 1.6;
+    background-color: $bg-color;
+    color: $text-color;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+// Переключение темы
+.theme-toggle {
+    position: fixed;
+    top: $spacing-md;
+    right: $spacing-md;
+    z-index: 1000;
+    
+    button {
+        @include button-style($primary-color);
+    }
+}
+
+// Шапка профиля
+.profile-header {
+    text-align: center;
+    padding: $spacing-xl 0;
+    
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid $primary-color;
+        margin-bottom: $spacing-md;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: $spacing-sm;
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+// Карточки
+.card {
+    @include card-style;
+}
+
+// Сетка навыков
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: $spacing-md;
+    
+    .skill-card {
+        @include card-style;
+        text-align: center;
+        padding: $spacing-md;
+    }
+    
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Сетка проектов
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    
+    .project-card {
+        @include card-style;
+    }
+}
+
+// Кнопки
+.btn-primary {
+    @include button-style($primary-color);
+}
+
+.btn-secondary {
+    @include button-style($secondary-color);
+}
+
+// Футер
+.footer {
+    text-align: center;
+    padding: $spacing-xl 0;
+    border-top: 1px solid $border-color;
+    margin-top: $spacing-xl;
+    
+    .social-links {
+        margin-bottom: $spacing-md;
+        
+        .social-link {
+            color: $primary-color;
+            text-decoration: none;
+            margin: 0 $spacing-sm;
+            font-weight: 600;
+            
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+// Медиазапросы
+@include tablet {
+    .profile-header h1 {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include mobile {
+    .container {
+        padding: 0 $spacing-sm;
+    }
+    
+    .profile-header {
+        padding: $spacing-lg 0;
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}

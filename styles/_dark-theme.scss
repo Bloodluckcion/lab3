@@ -1,0 +1,27 @@
+// Стили для тёмной темы
+body.dark-theme {
+    background-color: $dark-bg;
+    color: $dark-text;
+    
+    .card, .skill-card, .project-card {
+        background-color: $dark-card-bg;
+        border-color: $dark-border;
+        color: $dark-text;
+    }
+    
+    .btn-primary {
+        @include button-style($dark-primary, $dark-text);
+    }
+    
+    .btn-secondary {
+        @include button-style($dark-secondary, $dark-text);
+    }
+    
+    .social-link {
+        color: $dark-accent;
+        
+        &:hover {
+            color: lighten($dark-accent, 15%);
+        }
+    }
+}

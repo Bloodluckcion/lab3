@@ -1,0 +1,50 @@
+// Миксин для медиазапросов
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// Миксин для кнопок
+@mixin button-style($bg-color, $text-color: white) {
+    background: linear-gradient(135deg, $bg-color, darken($bg-color, 10%));
+    color: $text-color;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-dark;
+    }
+}
+
+// Миксин для карточек
+@mixin card-style {
+    background: $card-bg;
+    border-radius: $border-radius;
+    padding: $spacing-lg;
+    box-shadow: $shadow-light;
+    border: 1px solid $border-color;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-dark;
+    }
+}
